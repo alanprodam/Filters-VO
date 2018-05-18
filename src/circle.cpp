@@ -277,7 +277,7 @@ int main(int argc, char const *argv[])
 
   //open capture object at location zero (default location for webcam)
   //capture.open(1);
-  capture.open("/home/alantavares/Filters/Dataset-Filters/dataset-estavel.mp4");
+  capture.open(1);
 
   //add the fps controll
   cout << "fps: " << fps << endl;

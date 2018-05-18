@@ -261,7 +261,7 @@ int startWebcamMonitoring(Mat& cameraMatrix, Mat& distanceCoefficients, float ar
   while (1)
   {
 
-    video.open("/home/alantavares/Filters/Dataset-Filters/indoor.mp4");
+    video.open("/home/alantavares/Datasets/indoor_HD_1920.mp4");
 
     if (!video.isOpened())
     {

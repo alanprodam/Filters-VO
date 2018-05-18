@@ -54,7 +54,7 @@ bool loadCameraCalibration(Mat& cameraMatrix, Mat& distanceCoefficients)
 {
   ifstream myfile;
 
-  myfile.open("calibrationFile.txt");
+  myfile.open("calibrationFile(webcam).txt");
   if (myfile.is_open())
   {
     uint16_t rows;
@@ -113,6 +113,8 @@ int startWebcamMonitoring(Mat& cameraMatrix, Mat& distanceCoefficients, float ar
 
   VideoCapture video(1);
 
+  video.open("../Dataset-Filters/4X4_1000_Marker_0.jpeg");
+
   if (!video.isOpened())
   {
     cout << "Camera was not opened" << endl;
@@ -168,13 +170,12 @@ int startWebcamMonitoring(Mat& cameraMatrix, Mat& distanceCoefficients, float ar
 
     }
 
-    putText(frame, "X", Point(FRAME_WIDTH / 2, FRAME_HEIGHT / 2), 1.2, 1.2, Scalar(0, 0, 255), 2);
+    putText(frame, "X", Point(frame.cols / 2, frame.rows / 2), 1.2, 1.2, Scalar(0, 0, 255), 2);
 
     imshow("WebCam Aruco", frame);
-    if (waitKey(1) >= 0)
-    {
-      break;
-    }
+
+    while (char(cv::waitKey(0)) != 27)
+            ;  // wait for esc to be pressed
   }
   return 1;
 }
