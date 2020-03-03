@@ -4,14 +4,16 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/alantavares/Filters-VO/src/motionTracking.cpp" "/home/alantavares/Filters-VO/build/CMakeFiles/motionTracking.dir/src/motionTracking.cpp.o"
+  "/home/acta/Filters-VO/src/motionTracking.cpp" "/home/acta/Filters-VO/build/CMakeFiles/motionTracking.dir/src/motionTracking.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/opt/ros/kinetic/include/opencv-3.3.1-dev"
-  "/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv"
+  "."
+  "../"
+  "/usr/local/include"
+  "/usr/local/include/opencv"
   )
 
 # Targets to which this target links.

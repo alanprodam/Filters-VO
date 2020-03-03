@@ -1,7 +1,13 @@
 cmake_minimum_required(VERSION 2.8)
 project( Filters-VO )
-find_package( OpenCV 3.2 REQUIRED )
 
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+set(CMAKE_CXX_STANDARD 11) # C++11...
+set(CMAKE_CXX_STANDARD_REQUIRED ON) #...is required...
+set(CMAKE_CXX_EXTENSIONS ON) #...with compiler extensions like gnu++11
+
+find_package( OpenCV 3.4 REQUIRED )
+#find_package(OpenCV REQUIRED)
 include_directories( ${OpenCV_INCLUDE_DIRS} )
 
 file(GLOB Circle
